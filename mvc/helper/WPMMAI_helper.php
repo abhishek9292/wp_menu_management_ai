@@ -14,7 +14,7 @@ function set_GlobLLANG($key, $str) {
  
 function load_view($filename, $data = null, $return = false) {
     if ($data && is_array($data)) {
-        extract($data);
+        //eval("\$this=null;\$this->data=\$data ;");
     }
     $file = 'mvc/view/' . $filename . '.php';
     if($return){
@@ -24,3 +24,4 @@ function load_view($filename, $data = null, $return = false) {
         
     }
 }
+

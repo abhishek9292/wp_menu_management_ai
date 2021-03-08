@@ -9,7 +9,7 @@ class WPMMAI_Controller {
         global $wpdb;
         $this->db = $wpdb;
         $this->init();
-        add_action('admin_menu', array($this, 'init_menu'));
+        //add_action('admin_menu', array($this, 'init_menu'));
     }
 
     public function init_menu() {
@@ -58,9 +58,13 @@ class WPMMAI_Controller {
         };
     }
 
-    
-    public function masterpage(){
+    private function path() {
+        return trailingslashit(dirname(__FILE__)); //Will remove trailing forward and backslashes if it exists already before adding a trailing forward slash. This prevents double slashing a string or path.
+    }
+
+    public function masterpage() {
         //echo "masterpage";
         load_view("__main", $this->data);
     }
+
 }

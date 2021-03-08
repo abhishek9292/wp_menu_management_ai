@@ -17,9 +17,20 @@
 if (!defined('ABSPATH')) {
     exit();
 }
-define('WPMMAI_VERSION', '1.0');
-define('WPMMAI_PLUGIN_DIR', plugin_dir_path(__FILE__));
-define('WPMMAI_PLUGIN_BASE_NAME', plugin_basename(__FILE__));
-define('WPMMAI_PLUGIN_FILE', basename(__FILE__));
-define('WPMMAI_PLUGIN_FULL_PATH', __FILE__); 
-require_once( WPMMAI_PLUGIN_DIR . 'mvc/library/wpmmai_loader.php' ); 
+if (!defined('WPMMAI_VERSION')) {
+    define('WPMMAI_VERSION', '1.0');
+}
+if (!defined('WPMMAI_PLUGIN_DIR')) {
+    define('WPMMAI_PLUGIN_DIR', plugin_dir_path(__FILE__));
+}
+if (!defined('WPMMAI_PLUGIN_BASE_NAME')) {
+    define('WPMMAI_PLUGIN_BASE_NAME', plugin_basename(__FILE__));
+}
+if (!defined('WPMMAI_PLUGIN_FILE')) {
+    define('WPMMAI_PLUGIN_FILE', basename(__FILE__));
+}
+if (!defined('WPMMAI_PLUGIN_FULL_PATH')) {
+    define('WPMMAI_PLUGIN_FULL_PATH', __FILE__);
+}
+//load_plugin_textdomain( 'ai-mvc-framework', false, basename( dirname( __FILE__ ) ) . '/mvc/languages' );
+require_once( WPMMAI_PLUGIN_DIR . 'mvc/library/wpmmai_loader.php' );
