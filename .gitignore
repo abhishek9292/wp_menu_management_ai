@@ -27,7 +27,7 @@ mvc/logs/
 
 mvc/cache/
 nbproject/
-
+/nbproject/
 mvc/libraries/VPCPaymentConnection.php
 # ignore doc/notes.txt, but not doc/server/arch.txt
 doc/*.txt
